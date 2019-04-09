@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,50 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataHowTo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6GN-T9-Wvc">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Nhc-fs-XXS">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bQA-zv-euo">
+                                            <connections>
+                                                <action selector="onPlusTapped" destination="BYZ-38-t0r" id="IcO-LZ-FIe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ckD-2f-pdx">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3eT-XJ-Dc6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ckD-2f-pdx" firstAttribute="top" secondItem="6GN-T9-Wvc" secondAttribute="bottom" id="BQh-Dw-VVu"/>
+                            <constraint firstItem="6GN-T9-Wvc" firstAttribute="leading" secondItem="ckD-2f-pdx" secondAttribute="leading" id="LJS-Ks-nXJ"/>
+                            <constraint firstItem="ckD-2f-pdx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YFZ-ce-tZ0"/>
+                            <constraint firstItem="6GN-T9-Wvc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kCx-SO-xae"/>
+                            <constraint firstAttribute="trailing" secondItem="6GN-T9-Wvc" secondAttribute="trailing" id="n9i-0l-pFE"/>
+                            <constraint firstItem="6GN-T9-Wvc" firstAttribute="trailing" secondItem="ckD-2f-pdx" secondAttribute="trailing" id="nQY-Lr-vSb"/>
+                            <constraint firstItem="6GN-T9-Wvc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rLH-cO-Woj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ckD-2f-pdx" id="nxL-ju-03z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.25" y="138.38028169014083"/>
         </scene>
     </scenes>
 </document>

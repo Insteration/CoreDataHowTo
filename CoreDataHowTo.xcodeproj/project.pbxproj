@@ -13,6 +13,9 @@
 		D949D5C3225CAC050054DA37 /* CoreDataHowTo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D949D5C1225CAC050054DA37 /* CoreDataHowTo.xcdatamodeld */; };
 		D949D5C5225CAC060054DA37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D949D5C4225CAC060054DA37 /* Assets.xcassets */; };
 		D949D5C8225CAC060054DA37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D949D5C6225CAC060054DA37 /* LaunchScreen.storyboard */; };
+		D949D5D0225CADA20054DA37 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949D5CF225CADA20054DA37 /* PersistenceService.swift */; };
+		D949D5D3225CB2BF0054DA37 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949D5D1225CB2BE0054DA37 /* Person+CoreDataClass.swift */; };
+		D949D5D4225CB2BF0054DA37 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949D5D2225CB2BF0054DA37 /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D949D5C4225CAC060054DA37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D949D5C7225CAC060054DA37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D949D5C9225CAC060054DA37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D949D5CF225CADA20054DA37 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		D949D5D1225CB2BE0054DA37 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D949D5D2225CB2BF0054DA37 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,8 @@
 		D949D5AE225CAC040054DA37 = {
 			isa = PBXGroup;
 			children = (
+				D949D5D1225CB2BE0054DA37 /* Person+CoreDataClass.swift */,
+				D949D5D2225CB2BF0054DA37 /* Person+CoreDataProperties.swift */,
 				D949D5B9225CAC040054DA37 /* CoreDataHowTo */,
 				D949D5B8225CAC040054DA37 /* Products */,
 			);
@@ -57,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				D949D5BA225CAC040054DA37 /* AppDelegate.swift */,
+				D949D5CF225CADA20054DA37 /* PersistenceService.swift */,
 				D949D5BC225CAC040054DA37 /* ViewController.swift */,
 				D949D5BE225CAC050054DA37 /* Main.storyboard */,
 				D949D5C4225CAC060054DA37 /* Assets.xcassets */,
@@ -139,6 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D949D5C3225CAC050054DA37 /* CoreDataHowTo.xcdatamodeld in Sources */,
+				D949D5D0225CADA20054DA37 /* PersistenceService.swift in Sources */,
+				D949D5D4225CB2BF0054DA37 /* Person+CoreDataProperties.swift in Sources */,
+				D949D5D3225CB2BF0054DA37 /* Person+CoreDataClass.swift in Sources */,
 				D949D5BD225CAC040054DA37 /* ViewController.swift in Sources */,
 				D949D5BB225CAC040054DA37 /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4FXKBHXYA;
 				INFOPLIST_FILE = CoreDataHowTo/Info.plist;
@@ -295,6 +308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JG.CoreDataHowTo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4FXKBHXYA;
 				INFOPLIST_FILE = CoreDataHowTo/Info.plist;
@@ -313,6 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JG.CoreDataHowTo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
